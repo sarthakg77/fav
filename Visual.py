@@ -120,7 +120,7 @@ for dataset_num, tab in enumerate(tab_list):
 # Insert footer to reference dataset origin  
 footer="""<style>.footer {position: fixed;left: 0;bottom: 0;width: 100%;text-align: center;}</style><div class="footer">
 <p> <a style='display: block; text-align: center;'> Team 1 : Sarthak Gautam ,Antoine ,Jeff, Adriana </a></p></div>"""
-st.caption(" Team 1 : Sarthak Gautam ,Antoine ,Jeff, Adriana")
+st.caption(" Team 1 : Sarthak ,Antoine ,Jeff, Adriana")
 
 # Hide menu and footer
 hide_streamlit_style = """
