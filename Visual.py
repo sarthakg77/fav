@@ -9,11 +9,8 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 st.set_page_config(page_icon="deloitte.png",layout="wide",page_title="Finance AI")
 st.markdown("<h1 style='text-align: center; font-weight:bold; font-family:Times New Roman; padding-top: 0rem;'> \
             Finance AI</h1>", unsafe_allow_html=True)
-st.markdown("<h2 style='text-align: center;padding-top: 0rem;'>Creating Visualisations using Natural Language \
+st.markdown("<h2 style='text-align: center;padding-top: 0rem;'>Creating Visualisations using via Natural Language using ChatGPT \
             with ChatGPT</h2>", unsafe_allow_html=True)
-st.sidebar.markdown("<h4  style='text-align: center;font-size:small;color:grey;padding-top: 0rem;padding-bottom: .2rem;'>Finance AI: Generating Data \
-                    Visualisations via Natural Language using ChatGPT \
-                 Large Language Models </h4>", unsafe_allow_html=True)
 
 
 available_models = {"ChatGPT-3.5": "gpt-3.5-turbo","GPT-3": "text-davinci-003",}
@@ -23,7 +20,7 @@ if "datasets" not in st.session_state:
     datasets = {}
     # Preload datasets
     datasets["Amazon"] =pd.read_csv("amazon.csv")
-    datasets["Omega"] =pd.read_csv("Omega.csv")
+    datasets["SuperMarket"] =pd.read_csv("supermarket.csv")
     st.session_state["datasets"] = datasets
 else:
     # use the list already loaded
@@ -119,7 +116,7 @@ for dataset_num, tab in enumerate(tab_list):
         
 # Insert footer to reference dataset origin  
 footer="""<style>.footer {position: fixed;left: 0;bottom: 0;width: 100%;text-align: center;}</style><div class="footer">
-<p> <a style='display: block; text-align: center;'> Team 1 : Sarthak Gautam ,Antoine ,Jeff, Adriana </a></p></div>"""
+<p> <a style='display: block; text-align: center;'> Team 1 : Sarthak ,Antoine ,Jeff, Adriana </a></p></div>"""
 st.caption(" Team 1 : Sarthak ,Antoine ,Jeff, Adriana")
 
 # Hide menu and footer
