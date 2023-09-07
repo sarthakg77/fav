@@ -8,7 +8,7 @@ warnings.filterwarnings("ignore")
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.set_page_config(page_icon="deloitte.png",layout="wide",page_title="Consult AI")
 st.markdown("<h1 style='text-align: center; font-weight:bold; font-family:Times New Roman; padding-top: 0rem;'> \
-            Finance AI</h1>", unsafe_allow_html=True)
+            Consult AI</h1>", unsafe_allow_html=True)
 st.markdown("<h2 style='text-align: center;padding-top: 0rem;'>Creating Visualisations using via Natural Language using ChatGPT \
             </h2>", unsafe_allow_html=True)
 
