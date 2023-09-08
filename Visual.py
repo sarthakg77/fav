@@ -8,10 +8,8 @@ warnings.filterwarnings("ignore")
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.set_page_config(page_icon="deloitte.png", layout="wide", page_title="Consult AI")
 
-st.markdown("<h1 style='text-align: center; font-weight:bold; font-family:Times New Roman; padding-top: 0rem;'> \
-            Consult AI</h1>", unsafe_allow_html=True)
-st.markdown("<h2 style='text-align: center;padding-top: 0rem;'>Creating Visualisations using GPT-3 \
-            </h2>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; font-weight:bold; font-family:Times New Roman; padding-top: 0rem;'>Consult AI</h1>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center;padding-top: 0rem;'>Creating Visualisations using GPT-3</h2>", unsafe_allow_html=True)
 
 # Sidebar for OpenAI Key and CSV Import
 with st.sidebar:
@@ -32,12 +30,14 @@ go_btn = st.button("Go...")
 if go_btn:
     # Get the primer for this dataset
     primer1, primer2 = get_primer(dataset, 'dataset')
+    
     # Format the question
     question_to_ask = format_question(primer1, primer2, question)
 
     try:
         # Run the question
         answer = run_request(question_to_ask, "text-davinci-003", key=my_key)
+        
         # The answer is the completed Python script, so add the primer to it
         answer = primer2 + answer
         st.pyplot(exec(answer))
